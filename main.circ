@@ -65,14 +65,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </tool>
     <sep/>
     <tool lib="0" name="Pin">
-      <a name="width" val="2"/>
       <a name="tristate" val="false"/>
       <a name="label" val="MSB"/>
       <a name="labelloc" val="east"/>
     </tool>
     <tool lib="0" name="Pin">
-      <a name="facing" val="west"/>
+      <a name="facing" val="south"/>
       <a name="output" val="true"/>
+      <a name="width" val="2"/>
       <a name="labelloc" val="east"/>
     </tool>
     <tool lib="1" name="NOT Gate"/>
@@ -345,12 +345,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1020,730)" to="(1020,840)"/>
     <wire from="(90,910)" to="(120,910)"/>
     <wire from="(420,880)" to="(450,880)"/>
+    <wire from="(520,630)" to="(540,630)"/>
     <wire from="(380,290)" to="(540,290)"/>
     <wire from="(450,670)" to="(480,670)"/>
     <wire from="(540,320)" to="(570,320)"/>
     <wire from="(530,670)" to="(560,670)"/>
     <wire from="(280,360)" to="(280,400)"/>
     <wire from="(650,200)" to="(650,300)"/>
+    <wire from="(860,730)" to="(1020,730)"/>
     <wire from="(130,920)" to="(150,920)"/>
     <wire from="(240,350)" to="(260,350)"/>
     <wire from="(200,430)" to="(220,430)"/>
@@ -363,15 +365,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(650,680)" to="(650,820)"/>
     <wire from="(170,850)" to="(230,850)"/>
     <wire from="(540,450)" to="(1370,450)"/>
-    <wire from="(770,730)" to="(1020,730)"/>
     <wire from="(420,730)" to="(420,880)"/>
     <wire from="(630,290)" to="(670,290)"/>
     <wire from="(590,290)" to="(630,290)"/>
     <wire from="(690,670)" to="(730,670)"/>
-    <wire from="(520,610)" to="(520,640)"/>
     <wire from="(670,730)" to="(670,950)"/>
+    <wire from="(860,710)" to="(860,730)"/>
     <wire from="(220,320)" to="(260,320)"/>
     <wire from="(120,930)" to="(120,960)"/>
+    <wire from="(520,610)" to="(520,630)"/>
     <wire from="(380,360)" to="(420,360)"/>
     <wire from="(580,310)" to="(580,350)"/>
     <wire from="(510,600)" to="(510,640)"/>
@@ -437,6 +439,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(760,880)" to="(1030,880)"/>
     <wire from="(1370,300)" to="(1370,450)"/>
     <wire from="(390,690)" to="(450,690)"/>
+    <wire from="(520,630)" to="(520,640)"/>
     <wire from="(500,590)" to="(1000,590)"/>
     <wire from="(540,290)" to="(590,290)"/>
     <wire from="(180,450)" to="(180,460)"/>
@@ -459,6 +462,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(580,310)" to="(610,310)"/>
     <wire from="(690,320)" to="(1170,320)"/>
     <wire from="(530,660)" to="(560,660)"/>
+    <wire from="(770,730)" to="(860,730)"/>
     <wire from="(190,460)" to="(190,500)"/>
     <wire from="(130,870)" to="(150,870)"/>
     <wire from="(600,320)" to="(690,320)"/>
@@ -510,6 +514,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="2" loc="(300,340)" name="Multiplexer">
       <a name="select" val="2"/>
     </comp>
+    <comp lib="0" loc="(860,710)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(620,640)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -535,6 +545,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(190,330)" name="Constant"/>
     <comp lib="0" loc="(170,910)" name="Splitter">
       <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(540,630)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="2"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp loc="(570,350)" name="Up-Down Counter"/>
     <comp lib="2" loc="(170,440)" name="Demultiplexer"/>
@@ -967,12 +983,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(840,690)" to="(840,900)"/>
     <wire from="(380,280)" to="(380,440)"/>
     <wire from="(660,50)" to="(680,50)"/>
+    <wire from="(740,50)" to="(760,50)"/>
     <wire from="(310,260)" to="(330,260)"/>
     <wire from="(540,300)" to="(540,360)"/>
     <wire from="(1000,630)" to="(1070,630)"/>
     <wire from="(1150,40)" to="(1150,780)"/>
-    <wire from="(620,900)" to="(630,900)"/>
     <wire from="(850,370)" to="(850,420)"/>
+    <wire from="(620,900)" to="(630,900)"/>
     <wire from="(780,270)" to="(780,280)"/>
     <wire from="(860,400)" to="(1040,400)"/>
     <wire from="(870,410)" to="(1050,410)"/>
@@ -1243,6 +1260,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp loc="(660,340)" name="Shift-Register">
       <a name="facing" val="north"/>
     </comp>
+    <comp lib="0" loc="(740,50)" name="Constant"/>
     <comp lib="1" loc="(190,370)" name="NOT Gate">
       <a name="facing" val="west"/>
     </comp>
@@ -1251,11 +1269,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="output" val="true"/>
       <a name="label" val="s3"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(70,630)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="2b-ID"/>
     </comp>
     <comp loc="(960,280)" name="Has-Something?">
       <a name="facing" val="north"/>
@@ -1268,6 +1281,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="output" val="true"/>
       <a name="label" val="s0"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(70,630)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="2b-ID"/>
     </comp>
     <comp lib="1" loc="(620,900)" name="NOT Gate"/>
     <comp lib="2" loc="(580,630)" name="Demultiplexer">
