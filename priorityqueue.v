@@ -7,12 +7,13 @@ module prioq(in,
 	//DECLARATION
 	parameter size = 5;
 	wire [3:0] arr [size:0]; //Array to of length "size" to store four 4 bit values 
-	input  in[3:0];
-	input clk;
-	output out[3:0];
+	input  [3:0]in;	//4 bit input, with 2 bits representing priority, and 2 bits representing Unique ID.
+	input clk;	//Clock input
+	output [3:0]out;	//4 bit output corresponding to the 4 bit input.
 	reg [3:0] tmp; //temporary variable to swap front of queue with element with highest priority
-	output reg isfull, isempty;
-	integer count;
+	output reg isfull;	//Flag to check if the room is full/has reached capacity. 
+	output reg isempty;	//Flag to check if the room is empty.
+	integer count;		//Variable that keeps count of the number of patients presently in the room.
 
 	//INITIAL
 	initial 
