@@ -9,7 +9,7 @@ module prioq(in,
 	reg [1:0] priority_array[15:0]; //Array to store each patients priority.
 	input  [3:0]in;	//4 bit input, with 2 bits representing priority, and 2 bits representing Unique ID.
 	input clk;	//Clock input
-	inout ende;	//Flag , 0- Enqueue, 1-Dequeue
+	input ende;	//Flag , 0- Enqueue, 1-Dequeue
 	output reg  [3:0]out;	//4 bit output corresponding to the 4 bit input.
 	reg [3:0] tmp; //temporary variable to swap front of queue with element with highest priority
 	reg [1:0] tmp_priority;	// Temporary variable to hold priority.
