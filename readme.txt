@@ -1,0 +1,31 @@
+Automated Hospital Management System
+Suraj Singh 16CO146
+Mahir Jain 16CO123
+
+Basic idea:
+
+When the patient enters a hospital and doctors aren't currently available, they would be asked to wait in a queue. However, this queue is not based on a 'first in, first out' logic. It would be a middle ground between FIFO and the severity of the patients condition.
+
+In our implementation, we assume when a patient enters a hospital, there is a front desk which assigns the patient a token number which takes into account the patient's priority according to how bad the patient's ailment is, but at the same time keeps track in which order patients entered the hospital.
+
+Hence, we take a 4 bit input from the "help desk". We have divided patients into 4 broad categories:
+......
+and use 2 bits to represent each category. The remaining two bits represent the patient ID, which represents the patient's order within his/her priority (depennding on who came first).
+
+
+USING THE CIRCUIT:
+
+Navigate to the main area circuit.
+
+Switch the main switch ON 
+
+There is a button which represents whether a patient is supposed to enter or leave the waiting  room in the clock cycle. 0 represents a patient entering while 1 represents the scenario when a doctor is available to treat the next patient. 
+
+When the input signal is 0, set patient priority and ID and press CTRL + T to run one clock pulse. The counter value of the waiting room will increment by 1. Since we have 4 bits for the patient ID, the maximum number of patients in the room are 2^4 = 16. however, this project can be expanded by increasing the number of bits in the token number. If another patient tries entering the hospital, a red LED will glow signaling that there is no space available.
+
+When a doctor is ready, set the control signal to 1 and press CTRL + T to dequeue one patient at a time.
+
+
+Drawbacks:
+
+Patients cannot simultaneously enter and leave the waiting room in the same clock pulse.
