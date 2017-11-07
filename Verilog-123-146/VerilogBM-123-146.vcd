@@ -1,0 +1,99 @@
+$date
+	Tue Nov  7 22:04:06 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module Verilog_123_146 $end
+$var wire 4 ! out [3:0] $end
+$var wire 4 " counter [3:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ ende $end
+$var reg 4 % in [3:0] $end
+$scope module p1 $end
+$var wire 1 # clk $end
+$var wire 1 $ ende $end
+$var wire 4 & in [3:0] $end
+$var reg 4 ' counter [3:0] $end
+$var reg 1 ( isempty $end
+$var reg 1 ) isfull $end
+$var reg 4 * out [3:0] $end
+$var reg 4 + tmp [3:0] $end
+$var reg 2 , tmp_priority [1:0] $end
+$var integer 32 - count [31:0] $end
+$var integer 32 . i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx .
+b0 -
+bx ,
+bx +
+bx *
+x)
+x(
+bx '
+b11 &
+b11 %
+0$
+0#
+bx "
+bx !
+$end
+#500
+b1 "
+b1 '
+b1 -
+1#
+#1000
+b1010 %
+b1010 &
+0#
+#1500
+b10 "
+b10 '
+b10 -
+1#
+#2000
+1$
+0#
+#2500
+b1 "
+b1 '
+b1 -
+b1010 !
+b1010 *
+b10 ,
+b1010 +
+b10 .
+1#
+#3000
+b1101 %
+b1101 &
+0$
+0#
+#3500
+b10 "
+b10 '
+b10 -
+1#
+#4000
+1$
+0#
+#4500
+b1 "
+b1 '
+b1 -
+b1101 !
+b1101 *
+b11 ,
+b1101 +
+b10 .
+1#
+#5000
+0#

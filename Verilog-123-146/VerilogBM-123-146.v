@@ -21,10 +21,11 @@ The system is capable of:-
 //Module to implement main logic- that of the priority queue
 
 // This is a behavioral module. It utilises registers to store the input, and upon being sent signal for dequeue, produces the required output by observing the priority bits that have been assigned.
-module prioq(in,
+module VerilogBM_123_146(in,
 			clk, //Clock signal
 			out, //Output information/details of patient who is sent for treatment.
-			ende //enqueue(0)/dequeue(1)-Control input given by user. 
+			ende, //enqueue(0)/dequeue(1)-Control input given by user. 
+			counter //Keeps track of number of patients. 
 			   );  //ADD FLAGS FOR FULL AND EMPTY CHECK IN THESE ()
 	//DECLARATION
 	parameter size = 15;	//Capacity of the queue.
@@ -39,7 +40,7 @@ module prioq(in,
 
 	input ende;	//Flag , 0- Enqueue, 1-Dequeue
 
-	output reg  [3:0]out;	//4 bit output corresponding to the 4 bit input.
+	output reg  [3:0]out,counter ;	//4 bit output corresponding to the 4 bit input.
 
 	reg [3:0] tmp; //temporary variable to swap front of queue with element with highest priority
 
@@ -49,7 +50,7 @@ module prioq(in,
 
 	output reg isempty;	//Flag to check if the room is empty.
 
-	integer count,i;		//Variable that keeps count of the number of patients presently in the room.
+	integer i,count;		//Variable that keeps count of the number of patients presently in the room.
 
 	//INITIAL
 	initial 
@@ -86,6 +87,7 @@ module prioq(in,
 			out =  arr[0]; //Removing from front of the queue.
 			count = count - 1;	//Updating patient count.
 		end
+		assign counter = count; 
 
 	end
 

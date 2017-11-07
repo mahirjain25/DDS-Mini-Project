@@ -23,15 +23,15 @@ The system is capable of:-
 
 
 
-module test_circuit;
+module Verilog_123_146;
 
 reg [3:0]in;	//4 bit input, with 2 bits representing priority, and 2 bits representing Unique ID.
 reg clk;	//Clock input
 reg ende;	//Flag , 0- Enqueue, 1-Dequeue
-wire [3:0]out;	//4 bit output corresponding to the 4 bit input.
+wire [3:0]out,counter;	//4 bit output corresponding to the 4 bit input.
 
-prioq p1(in,clk,out,ende); //Initiating module to implement the logic.
-
+VerilogBM_123_146 p1(in,clk,out,ende,counter); //Initiating module to implement the logic.//
+//VerilogDM_123_146 p1(in,clk,out,ende,counter); //Initiating module to implement the logic.
 //Setting up clock pulse
 
 initial
@@ -43,6 +43,8 @@ always #5 clk = ~clk;
 //Providing stimulus to circuit
 initial 
 begin
+	$dumpfile("VerilogBM-123-146.vcd");
+	$dumpvars(0, Verilog_123_146);
 	//Initialise inputs
 	ende <= 0;
 	in <= 4'b0011; //Enqueue Priority-00 ID-11
@@ -55,12 +57,12 @@ begin
 	in <= 4'b1101; //Enqueue Priority-11 ID-01
 	#10;
 	ende <= 1'b1;  //Dequeue requested
-	#20;
+	#10;
 	$finish;       //Stop simulation
 end
 initial 
 begin
 	//Displaying relevant outputs on the terminal/bash.
-	$monitor("Time:- %t, Ende:- %b, in:- %b, out:- %b",$time,ende,in,out);
+	$monitor("Time:- %t, Ende:- %b, In:- %b, Out:- %b, Number of patients:- %b",$time,ende,in,out,counter);
 end
 endmodule

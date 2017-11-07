@@ -2,6 +2,10 @@ Automated Hospital Management System
 Suraj Singh 16CO146
 Mahir Jain 16CO123
 
+
+NOTE:- Verilog 10.2 is required to execute the programs.
+
+
 Basic idea:
 
 When the patient enters a hospital and doctors aren't currently available, they would be asked to wait in a queue. However, this queue is not based on a 'first in, first out' logic. It would be a middle ground between FIFO and the severity of the patients condition.
